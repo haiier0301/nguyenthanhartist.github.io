@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup Guide - Nguyen Thanh Gallery Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+            background: #fafaf8;
+            color: #000;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            margin-top: 60px;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        .intro {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 60px;
+        }
+        .status-box {
+            background: white;
+            border: 1px solid #e0e0e0;
+            padding: 40px;
+            margin: 40px 0;
+        }
+        .checklist {
+            list-style: none;
+            margin: 30px 0;
+        }
+        .checklist li {
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 15px;
+            font-weight: 300;
+        }
+        .checklist li:before {
+            content: "□";
+            margin-right: 15px;
+            color: #999;
+            font-size: 18px;
+        }
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: #000;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        .step {
+            margin: 30px 0;
+            display: flex;
+            align-items: flex-start;
+        }
+        .step-content {
+            flex: 1;
+        }
+        .button {
+            display: inline-block;
+            background: #000;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            margin-top: 30px;
+            transition: opacity 0.2s;
+        }
+        .button:hover {
+            opacity: 0.8;
+        }
+        .button-secondary {
+            background: white;
+            color: #000;
+            border: 1px solid #000;
+            margin-left: 15px;
+        }
+        code {
+            background: #f5f5f5;
+            padding: 3px 8px;
+            font-size: 13px;
+            font-family: 'Courier New', monospace;
+        }
+        .highlight {
+            background: #fff9e6;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 3px solid #000;
+        }
+        .image-count {
+            font-size: 48px;
+            font-weight: 300;
+            text-align: center;
+            margin: 40px 0 20px;
+            color: #000;
+        }
+        .image-count-label {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        .file-structure {
+            background: #f5f5f5;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            margin: 20px 0;
+            line-height: 1.8;
+        }
+        .pages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .page-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 300;
+        }
+        .page-card strong {
+            display: block;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Nguyen Thanh Gallery Website</h1>
+        <p class="intro">
+            Your minimalist art gallery website is ready. Follow the simple steps below to complete the setup.
+        </p>
+
+        <div class="status-box">
+            <h2 style="margin-top: 0;">Website Status</h2>
+            <div class="image-count">28</div>
+            <div class="image-count-label">IMAGES NEEDED TO COMPLETE</div>
+            <p>The website structure is complete with all pages and content. You only need to add your artwork photographs to bring it to life.</p>
+        </div>
+
+        <h2>Website Pages</h2>
+        <div class="pages-grid">
+            <div class="page-card">
+                <strong>HOME</strong>
+                Hero artwork image with artist introduction
+            </div>
+            <div class="page-card">
+                <strong>ABOUT</strong>
+                Biography, artistic practice & philosophy
+            </div>
+            <div class="page-card">
+                <strong>ARTWORKS</strong>
+                Three series with 20+ paintings
+            </div>
+            <div class="page-card">
+                <strong>EXHIBITIONS</strong>
+                Awards and exhibition history
+            </div>
+            <div class="page-card">
+                <strong>NEWS</strong>
+                Press features and announcements
+            </div>
+            <div class="page-card">
+                <strong>CONTACT</strong>
+                Gallery contact information
+            </div>
+        </div>
+
+        <h2>Quick Start Guide</h2>
+
+        <div class="step">
+            <span class="step-number">1</span>
+            <div class="step-content">
+                <h3>Prepare Your Images</h3>
+                <p>Photograph all artworks in high quality. Images should be:</p>
+                <ul class="checklist">
+                    <li>High resolution (2000px+ width for hero images)</li>
+                    <li>Well-lit with accurate colors</li>
+                    <li>Saved as JPG format</li>
+                    <li>Compressed to 200-500KB per file</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step">
+            <span class="step-number">2</span>
+            <div class="step-content">
+                <h3>Organize Your Files</h3>
+                <p>Rename your images according to the required filenames. See the complete list in:</p>
+                <div class="file-structure">images/IMAGE_GUIDE.txt</div>
+                <p>Examples: <code>hero-artwork.jpg</code>, <code>peace-city-1.jpg</code>, <code>artist-photo.jpg</code></p>
+            </div>
+        </div>
+
+        <div class="step">
+            <span class="step-number">3</span>
+            <div class="step-content">
+                <h3>Upload Images</h3>
+                <p>Place all renamed images into the <code>images/</code> folder in this directory.</p>
+                <div class="highlight">
+                    <strong>Important:</strong> Exact filenames are required. Check the IMAGE_GUIDE.txt file for the complete list of 28 required images.
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <span class="step-number">4</span>
+            <div class="step-content">
+                <h3>View Your Website</h3>
+                <p>Once images are added, open <code>index.html</code> in your web browser to view the complete gallery website.</p>
+            </div>
+        </div>
+
+        <h2>Design Features</h2>
+        <p>Your website includes all the professional gallery design elements:</p>
+        <ul class="checklist">
+            <li>Minimalist white gallery aesthetic (inspired by White Cube)</li>
+            <li>Clean typography with Inter font family</li>
+            <li>Generous white space for artwork focus</li>
+            <li>Fully responsive design (mobile, tablet, desktop)</li>
+            <li>No distracting icons, borders, or animations</li>
+            <li>Professional navigation and layout</li>
+        </ul>
+
+        <h2>Need Help?</h2>
+        <p>For detailed image requirements and specifications, see:</p>
+        <div class="file-structure">
+README.md<br>
+images/IMAGE_GUIDE.txt<br>
+placeholder-generator.html
+        </div>
+
+        <div style="margin-top: 60px; text-align: center;">
+            <a href="index.html" class="button">Preview Website Now →</a>
+            <a href="placeholder-generator.html" class="button button-secondary">View Image Guide</a>
+        </div>
+
+        <div style="margin-top: 80px; padding-top: 40px; border-top: 1px solid #e0e0e0; text-align: center; color: #999; font-size: 13px;">
+            <p>Nguyen Thanh Gallery • Ho Chi Minh City, Vietnam</p>
+            <p>nguyentrangartist78@gmail.com</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
