@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silent Horizon — Nguyen Thanh</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <a href="index.html">NGUYEN THANH</a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="artworks.html">Artworks</a></li>
+            <li><a href="exhibitions.html">Exhibitions</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Series Detail Page -->
+  <main style="padding-top: 80px; padding-bottom: 120px;">
+    
+    <!-- Series Header -->
+    <div class="container series-detail-header">
+      <p class="series-breadcrumb"><a href="artworks.html">← Back to Artworks</a></p>
+      <h1>SILENT HORIZON</h1>
+      <p class="series-meta">2023–2024 • 4 Paintings</p>
+      <div class="series-intro">
+        <p>
+          A study of meditative horizons and diffused light across shifting emotional landscapes. These works invite contemplation through subtle transitions and atmospheric depth.
+        </p>
+      </div>
+    </div>
+
+    <!-- Artworks Grid -->
+    <div class="container">
+      <div class="artworks-grid">
+        
+        <div class="artwork-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='1000'%3E%3Crect width='800' height='1000' fill='%23d4d4d4'/%3E%3C/svg%3E" alt="Distant Horizon">
+          <div class="artwork-caption">
+            <p class="artwork-title">Distant Horizon, 2023</p>
+            <p>Oil on canvas, 100 × 120 cm</p>
+          </div>
+        </div>
+
+        <div class="artwork-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='900'%3E%3Crect width='800' height='900' fill='%23d4d4d4'/%3E%3C/svg%3E" alt="Ethereal Dawn">
+          <div class="artwork-caption">
+            <p class="artwork-title">Ethereal Dawn, 2023</p>
+            <p>Oil on canvas, 90 × 110 cm</p>
+          </div>
+        </div>
+
+        <div class="artwork-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='800'%3E%3Crect width='800' height='800' fill='%23d4d4d4'/%3E%3C/svg%3E" alt="Soft Boundary">
+          <div class="artwork-caption">
+            <p class="artwork-title">Soft Boundary, 2024</p>
+            <p>Oil on canvas, 100 × 100 cm</p>
+          </div>
+        </div>
+
+        <div class="artwork-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='1000'%3E%3Crect width='800' height='1000' fill='%23d4d4d4'/%3E%3C/svg%3E" alt="Twilight Pause">
+          <div class="artwork-caption">
+            <p class="artwork-title">Twilight Pause, 2024</p>
+            <p>Oil on canvas, 120 × 100 cm</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>Nguyen Thanh Gallery — Ho Chi Minh City, Vietnam — Email: nguyentrangartist78@gmail.com</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close">&times;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+      <div class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <script>
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.querySelector('.lightbox-caption');
+    const closeBtn = document.querySelector('.lightbox-close');
+    const artworkItems = document.querySelectorAll('.artwork-item img');
+
+    // Open lightbox when clicking on artwork images
+    artworkItems.forEach((img, index) => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', function() {
+        const caption = this.nextElementSibling.querySelector('.artwork-title').textContent;
+        const details = this.nextElementSibling.querySelector('p:last-child').textContent;
+        
+        lightboxImg.src = this.src;
+        lightboxImg.alt = this.alt;
+        lightboxCaption.innerHTML = `<p class="caption-title">${caption}</p><p class="caption-details">${details}</p>`;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    // Close lightbox
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    closeBtn.addEventListener('click', closeLightbox);
+    
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    // Close with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+  </script>
+
+</body>
+</html>
+
